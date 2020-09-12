@@ -7,10 +7,9 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i(new create index show destroy) do
     resources :photos, only: %i(create)
+    resources :likes, only: %i(create destroy)
   end
-  # get'/posts/new',to: 'posts#new'
-  # get'/posts', to:'posts#create'
-  # post'/posts/:post_id/photos',to:'photos#create',as: 'post_photos'
-  # 上のコードの別の書き方
+
+  
 
 end
